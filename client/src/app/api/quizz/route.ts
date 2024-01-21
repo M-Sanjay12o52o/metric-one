@@ -1,7 +1,6 @@
 import { getAuthSession } from "@/lib/auth";
 import { db } from "@/lib/db";
 import { QuizzValidator } from "@/lib/validators/quizz";
-import { Quicksand } from "next/font/google";
 import { z } from "zod";
 
 export async function POST(req: Request) {

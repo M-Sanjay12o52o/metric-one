@@ -4,6 +4,20 @@ import { nanoid } from "nanoid";
 import { NextAuthOptions, getServerSession } from "next-auth";
 import GoogleProvider from "next-auth/providers/google";
 import GitHubProvider from "next-auth/providers/github";
+import CredentialsProvider from "next-auth/providers/credentials";
+
+const users = [
+  { id: "42", name: "John", password: "nextauth" },
+  { id: "43", name: "Jane", password: "password123" },
+  { id: "44", name: "Bob", password: "securepass" },
+  { id: "45", name: "Alice", password: "qwerty" },
+  { id: "46", name: "Charlie", password: "letmein" },
+  { id: "47", name: "Eva", password: "123456" },
+  { id: "48", name: "David", password: "welcome123" },
+  { id: "49", name: "Grace", password: "p@ssw0rd" },
+  { id: "50", name: "Henry", password: "pass1234" },
+  { id: "51", name: "Isabel", password: "secretPass" },
+];
 
 export const authOptions: NextAuthOptions = {
   adapter: PrismaAdapter(db),
